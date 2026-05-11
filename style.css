@@ -777,6 +777,18 @@ body.dark-mode .box-glass:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.02);
 }
 
+/* =========================================
+   การจัดรูปแบบข้อความ (ย่อหน้า & กระจายหัวท้าย)
+   โดยอิงจากคลาสที่มีอยู่แล้ว
+   ========================================= */
+
+.hero-desc, 
+.about-content > p, 
+.company-duration + p {
+    text-align: justify;
+    text-justify: inter-word;
+    text-indent: 2.5em; /* ระยะเว้นวรรคย่อหน้าแรก (ปรับตัวเลขได้) */
+}
 
 
 
