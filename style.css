@@ -474,12 +474,12 @@ body.dark-mode .box-glass:hover {
 }
 
 .info-card i {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 1.2rem;
 }
 
 .info-card h3 {
-    font-size: 1.4rem;
+    font-size: 2.5rem;
     margin-bottom: 1.2rem;
     padding-bottom: 0.8rem;
     border-bottom: 1px solid var(--glass-border);
@@ -503,7 +503,7 @@ body.dark-mode .box-glass:hover {
 }
 
 .info-desc {
-    font-size: 0.95rem;
+    font-size: 2rem;
     color: var(--text-secondary);
     display: block;
     margin-top: 0.5rem;
