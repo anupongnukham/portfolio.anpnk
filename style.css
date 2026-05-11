@@ -784,16 +784,72 @@ body.dark-mode .box-glass:hover {
 
 
 
-/* ปรับแต่งสำหรับมือถือ */
-@media (max-width: 768px) {
-    .modal-content { 
+/* =========================================
+   14. รองรับหน้าจอมือถือและแท็บเล็ต (Responsive Design)
+   ========================================= */
+@media (max-width: 1024px) {
+    .hero {
+        min-height: auto; 
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+    
+    .hero h1 { 
+        font-size: 2.2rem; 
+        line-height: 1.3;
+    }
+    
+    .profile-wrapper {
+        margin-bottom: 1.5rem;
+    }
+    
+    .profile-img {
+        width: 140px; 
+        height: 140px;
+    }
+    
+    .typing-text {
+        font-size: 1.2rem; 
+        min-height: 30px;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-desc {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 15px;
+    }
+    
+    /* แก้ไขปัญหาเมนูเบียดกันตรงนี้ */
+    .nav-links { 
+        display: none; /* บังคับซ่อนเมนูยาวๆ ก่อน */
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        width: 100%; 
+        background: var(--glass-bg); 
+        backdrop-filter: var(--nav-blur); 
+        -webkit-backdrop-filter: var(--nav-blur);
+        flex-direction: column; /* เปลี่ยนให้เรียงจากบนลงล่าง */
+        padding: 2rem 0; 
+        text-align: center; 
+        border-bottom: 1px solid var(--glass-border); 
+        gap: 1.5rem; /* เพิ่มระยะห่างระหว่างบรรทัดตอนกดเมนู */
+    }
+    
+    .nav-links.active { 
+        display: flex; /* แสดงเมนูเมื่อกดปุ่มแฮมเบอร์เกอร์ */
+    }
+    
+    .hamburger { 
+        display: block; /* บังคับแสดงปุ่ม 3 ขีด */
+    }
+    
+    .section { 
+        padding: 60px 0; 
+    } 
+    
+    .box-glass { 
         padding: 1.5rem; 
-        max-height: 90vh;
-    }
-    .modal-actions { 
-        flex-direction: column; 
-    }
-    .resume-preview {
-        height: 50vh;
     }
 }
