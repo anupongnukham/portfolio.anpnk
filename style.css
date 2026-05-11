@@ -617,19 +617,6 @@ body.dark-mode .box-glass:hover {
     border-color: var(--text-primary);
 }
 
-/* ปรับแต่งสำหรับมือถือ */
-@media (max-width: 768px) {
-    .modal-content { 
-        padding: 1.5rem; 
-        max-height: 90vh;
-    }
-    .modal-actions { 
-        flex-direction: column; 
-    }
-    .resume-preview {
-        height: 50vh;
-    }
-}
 /* =========================================
    16. ข้อมูลเพิ่มเติม (Additional Info Section)
    ========================================= */
@@ -678,4 +665,17 @@ body.dark-mode .box-glass:hover {
     color: var(--text-secondary);
     display: block;
     margin-top: 0.3rem;
+}
+/* ปรับแต่งสำหรับมือถือ */
+@media (max-width: 768px) {
+    .modal-content { 
+        padding: 1.5rem; 
+        max-height: 90vh;
+    }
+    .modal-actions { 
+        flex-direction: column; 
+    }
+    .resume-preview {
+        height: 50vh;
+    }
 }
