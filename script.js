@@ -117,3 +117,23 @@ if (typeof VanillaTilt !== 'undefined') {
         scale: 1.03
     });
 }
+// 6. ระบบเปิด-ปิด Pop-up Resume
+function openResumeModal() {
+    document.getElementById('resumeModal').classList.add('show');
+    // ป้องกันไม่ให้หน้าเว็บด้านหลังเลื่อนได้ตอนเปิด Pop-up
+    document.body.style.overflow = 'hidden'; 
+}
+
+function closeResumeModal() {
+    document.getElementById('resumeModal').classList.remove('show');
+    // คืนค่าให้หน้าเว็บเลื่อนได้ปกติ
+    document.body.style.overflow = 'auto'; 
+}
+
+// ปิด Pop-up อัตโนมัติเมื่อคลิกพื้นที่ว่างด้านนอกกล่อง
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('resumeModal');
+    if (event.target === modal) {
+        closeResumeModal();
+    }
+});
