@@ -29,9 +29,9 @@
 
     <header id="home" class="hero">
         <div class="hero-content reveal-apple">
-            <div class="profile-wrapper">
-                <img src="Kiw.jpg" alt="อนุพงศ์" class="profile-img">
-            </div>
+                <div class="profile-wrapper">
+        <img src="Kiw.jpg" alt="อนุพงศ์" class="profile-img" onclick="openProfileModal()">
+                </div>
             <h1>สวัสดีครับ ผมชื่อ</h1>
 <h1> <span class="text-gradient">นาย อนุพงศ์ หนูเข็ม (คิว)</span></h1>
             <h2 class="typing-text"></h2>
@@ -299,6 +299,18 @@
         </div>
     </div>
 
+    <div id="profileModal" class="modal-overlay">
+        <div class="modal-content box-glass" style="max-width: 500px; text-align: center;">
+            <button class="close-btn" onclick="closeProfileModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div style="margin-top: 1rem; display: flex; justify-content: center;">
+                <img src="Kiw.jpg" alt="รูปโปรไฟล์อนุพงศ์" style="max-width: 100%; max-height: 70vh; border-radius: 16px; object-fit: contain; box-shadow: var(--shadow);">
+            </div>
+            
+        </div>
+    </div>
 
 
     
