@@ -1,3 +1,4 @@
+
 // บังคับให้หน้าเว็บโหลดกลับไปที่จุดบนสุดเสมอ (ปิดการจำตำแหน่งเดิมของเบราว์เซอร์)
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
@@ -88,7 +89,8 @@ themeBtn.addEventListener('click', () => {
 
 // 4. แอนิเมชันตอนเลื่อนหน้าจอ (Scroll Reveal)
 function reveal() {
-    const reveals = document.querySelectorAll('.reveal');
+    // ✅ แก้ไขชื่อคลาสให้ตรงกับ HTML (.reveal-apple)
+    const reveals = document.querySelectorAll('.reveal-apple'); 
     const windowHeight = window.innerHeight;
     
     reveals.forEach(element => {
@@ -96,7 +98,8 @@ function reveal() {
         const elementVisible = 120; // ระยะที่เริ่มแสดงผล
 
         if (elementTop < windowHeight - elementVisible) {
-            element.classList.add('active');
+            // ✅ แก้ไขชื่อคลาสให้ตรงกับ CSS (.is-visible)
+            element.classList.add('is-visible'); 
         }
     });
 }
