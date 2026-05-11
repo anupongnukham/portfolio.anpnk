@@ -337,18 +337,18 @@ body.dark-mode .box-glass:hover {
 }
 
 .skill-card i { 
-    font-size: 4rem; 
+    font-size: 3rem; 
     margin-bottom: 1.5rem; 
 }
 
 .skill-card h3 { 
-    font-size: 3em; 
+    font-size: 1.4rem; 
     margin-bottom: 0.5rem; 
 }
 
 .skill-card p { 
     color: var(--text-secondary); 
-    font-size: 2rem; 
+    font-size: 0.95rem; 
 }
 
 /* =========================================
