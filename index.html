@@ -165,39 +165,53 @@
 
 
 
-        <section id="additional-info" class="section">
+    <section id="additional-info" class="section">
         <div class="container reveal-apple">
             <h2 class="section-title">ข้อมูลเพิ่มเติม</h2>
             <div class="additional-grid">
                 
-                <div class="info-card box-glass tilt-effect">
+                <div class="info-card box-glass tilt-effect" data-tilt>
                     <i class="fas fa-language icon-gradient"></i>
                     <h3>ทักษะด้านภาษา</h3>
-                    <ul class="info-list">
-                        <li>
-                            <strong>ภาษาไทย:</strong> ระดับดีเยี่ยม (Native)<br>
-                            <span class="info-desc">ทักษะการฟัง พูด อ่าน และเขียน</span>
-                        </li>
-                        <li>
-                            <strong>ภาษาอังกฤษ:</strong> ระดับดี (Good)<br>
-                            <span class="info-desc">ทักษะการอ่านและเขียนระดับดี / การพูดระดับปานกลาง</span>
-                        </li>
-                    </ul>
+                    
+                    <div class="skill-bar-container">
+                        <div class="skill-info">
+                            <strong>ภาษาไทย</strong>
+                            <span>ดีเยี่ยม (ฟัง, พูด, อ่าน, เขียน)</span>
+                        </div>
+                        <div class="progress-bg">
+                            <div class="progress-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar-container">
+                        <div class="skill-info">
+                            <strong>ภาษาอังกฤษ</strong>
+                            <span>ปานกลาง (ฟัง, พูด, อ่าน, เขียน)</span>
+                        </div>
+                        <div class="progress-bg">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="info-card box-glass tilt-effect">
+                <div class="info-card box-glass tilt-effect" data-tilt>
                     <i class="fas fa-certificate icon-gradient"></i>
                     <h3>ประวัติการฝึกอบรม</h3>
                     <ul class="info-list">
                         <li>
                             <strong>Microsoft Excel ระดับมืออาชีพ</strong><br>
                             <span class="info-desc"><strong>สถาบัน:</strong> Coursera</span><br>
-                            <span class="info-desc">ผ่านการประเมินทักษะการใช้ Excel เพื่อจัดการข้อมูลและวางระบบงานเอกสาร ช่วยเพิ่มความรวดเร็วและถูกต้องให้ระบบหลังบ้าน</span>
+                            <span class="info-desc">ผ่านการประเมินทักษะการใช้ Excel เพื่อจัดการข้อมูลและวางระบบงานเอกสาร</span>
+                            
+                            <button onclick="openCertModal()" class="btn secondary-btn small-btn mt-3">
+                                <i class="fas fa-award"></i> ดูเกียรติบัตร
+                            </button>
                         </li>
                     </ul>
                 </div>
 
-                <div class="info-card box-glass tilt-effect">
+                <div class="info-card box-glass tilt-effect" data-tilt>
                     <i class="fas fa-car icon-gradient"></i>
                     <h3>ข้อมูลใบอนุญาตขับขี่</h3>
                     <ul class="info-list">
@@ -211,6 +225,22 @@
             </div>
         </div>
     </section>
+
+
+
+
+        <div id="certModal" class="modal-overlay">
+        <div class="modal-content box-glass">
+            <button class="close-btn" onclick="closeCertModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 style="text-align: center; margin-bottom: 1rem;">เกียรติบัตร Coursera</h3>
+            <div class="resume-preview img-preview">
+                <img src="cert-excel.jpg" alt="Certificate" class="resume-img">
+            </div>
+        </div>
+    </div>
+
 
 
     
