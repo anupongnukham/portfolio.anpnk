@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+
+/* =========================================
+   1. ตัวแปรสีและค่าพื้นฐาน (Variables)
+   ========================================= */
+:root {
+    /* Apple-like Light Theme */
+    --bg-primary: #fbfbfd;
+    --bg-secondary: #f5f5f7;
+    --text-primary: #1d1d1f;
+    --text-secondary: #86868b;
+    --accent-color: #0066cc;
+    --gradient-start: #2997ff;
+    --gradient-end: #ab61fa;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    --nav-blur: blur(20px) saturate(180%);
+}
+
+body.dark-mode {
+    /* Apple-like Dark Theme */
+    --bg-primary: #000000;
+    --bg-secondary: #1c1c1e;
+    --text-primary: #f5f5f7;
+    --text-secondary: #a1a1a6;
+    --accent-color: #2997ff;
+    --glass-bg: rgba(28, 28, 30, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================================
+   2. การตั้งค่าเริ่มต้น (Reset & Base)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    overflow-x: hidden;
+}
+
+.bg-alt { 
+    background-color: var(--bg-secondary); 
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 5%; 
+}
+
+.section { 
+    padding: 140px 0; 
+}
+
+/* =========================================
+   3. ตัวอักษร (Typography)
+   ========================================= */
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icon-gradient {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* =========================================
+   4. กล่องสไตล์กระจก (Glassmorphism Components)
+   ========================================= */
+.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: var(--nav-blur);
+    -webkit-backdrop-filter: var(--nav-blur);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.box-glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.box-glass:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+body.dark-mode .box-glass:hover { 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6); 
+}
+
+/* =========================================
+   5. แถบเมนูนำทาง (Navigation)
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem 5%; 
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.logo { 
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    letter-spacing: -0.03em; 
+}
+
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+    gap: 2.5rem; 
+}
+
+.nav-links a {
+    color: var(--text-primary); 
+    text-decoration: none;
+    font-size: 0.95rem; 
+    font-weight: 500; 
+    opacity: 0.8; 
+    transition: opacity 0.2s;
+}
+
+.nav-links a:hover { 
+    opacity: 1; 
+}
+
+.nav-controls { 
+    display: flex; 
+    align-items: center; 
+    gap: 1.5rem; 
+}
+
+.theme-btn { 
+    background: none; 
+    border: none; 
+    color: var(--text-primary); 
+    font-size: 1.2rem; 
+    cursor: pointer; 
+}
+
+.hamburger { 
+    display: none; 
+    color: var(--text-primary); 
+    font-size: 1.5rem; 
+    cursor: pointer; 
+}
+
+/* =========================================
+   6. หน้าแรก (Hero Section)
+   ========================================= */
+.hero {
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+    padding-top: 80px;
+}
+
+.profile-wrapper { 
+    margin-bottom: 2rem; 
+}
+
+.profile-img {
+    width: 280px; 
+    height: 280px; 
+    border-radius: 50%;
+    object-fit: cover; 
+    box-shadow: var(--shadow);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    display: block;
+    margin: 0 auto;
+}
+
+.profile-img:hover { 
+    transform: scale(1.05); 
+}
+
+.hero h1 { 
+    font-size: 4.5rem; 
+    font-weight: 700; 
+    letter-spacing: -0.04em; 
+    margin-bottom: 0.5rem; 
+    line-height: 1.1; 
+}
+
+.typing-text { 
+    font-size: 1.8rem; 
+    font-weight: 500; 
+    color: var(--text-secondary); 
+    height: 40px; 
+    margin-bottom: 1.5rem; 
+}
+
+.hero-desc { 
+    max-width: 600px; 
+    font-size: 1.25rem; 
+    color: var(--text-secondary); 
+    margin: 0 auto 3rem; 
+}
+
+/* =========================================
+   7. ปุ่มต่างๆ (Buttons)
+   ========================================= */
+.btn {
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px;
+    padding: 14px 32px; 
+    border-radius: 980px; /* Apple pill shape */
+    font-size: 1.1rem; 
+    font-weight: 600; 
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); 
+    cursor: pointer;
+}
+
+.primary-btn { 
+    background-color: var(--accent-color); 
+    color: #fff; 
+    border: none; 
+}
+
+.primary-btn:hover { 
+    background-color: #0055b3; 
+    transform: scale(1.02); 
+}
+
+.btn-large { 
+    padding: 18px 40px; 
+    font-size: 1.2rem; 
+}
+
+.glow-effect { 
+    box-shadow: 0 8px 24px rgba(0, 102, 204, 0.4); 
+}
+
+/* =========================================
+   8. เกี่ยวกับฉัน (About & Grid)
+   ========================================= */
+.about-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 2rem; 
+    margin-top: 3rem; 
+    border-top: 1px solid var(--glass-border); 
+    padding-top: 3rem; 
+}
+
+.about-item { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+}
+
+.about-item .label { 
+    font-size: 0.9rem; 
+    color: var(--text-secondary); 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    margin-bottom: 0.5rem; 
+}
+
+.about-item .value { 
+    font-size: 1.2rem; 
+    font-weight: 600; 
+}
+
+/* =========================================
+   9. ทักษะ (Skills Grid)
+   ========================================= */
+.skills-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 2rem; 
+}
+
+.skill-card { 
+    text-align: center; 
+}
+
+.skill-card i { 
+    font-size: 3rem; 
+    margin-bottom: 1.5rem; 
+}
+
+.skill-card h3 { 
+    font-size: 1.4rem; 
+    margin-bottom: 0.5rem; 
+}
+
+.skill-card p { 
+    color: var(--text-secondary); 
+    font-size: 0.95rem; 
+}
+
+/* =========================================
+   10. ประสบการณ์ (Timeline)
+   ========================================= */
+.timeline { 
+    position: relative; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding-left: 2rem; 
+}
+
+.timeline::before { 
+    content: ''; 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    height: 100%; 
+    width: 2px; 
+    background: var(--glass-border); 
+}
+
+.timeline-item { 
+    position: relative; 
+    margin-bottom: 3rem; 
+}
+
+.timeline-dot { 
+    position: absolute; 
+    left: -2rem; 
+    top: 1.5rem; 
+    width: 16px; 
+    height: 16px; 
+    border-radius: 50%; 
+    background: var(--accent-color); 
+    transform: translateX(-50%); 
+    border: 4px solid var(--bg-primary); 
+}
+
+.timeline-content h3 { 
+    font-size: 1.4rem; 
+}
+
+.timeline-content h4 { 
+    font-size: 1.1rem; 
+    margin-bottom: 1rem; 
+}
+
+.timeline-content p { 
+    color: var(--text-secondary); 
+}
+
+/* =========================================
+   11. ผลงาน (Portfolio Showcase)
+   ========================================= */
+.portfolio-showcase { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem; 
+    margin-bottom: 4rem; 
+}
+
+.portfolio-item { 
+    border-radius: 24px; 
+    overflow: hidden; 
+    box-shadow: var(--shadow); 
+    aspect-ratio: 16/9; 
+}
+
+.portfolio-item img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
+}
+
+.portfolio-item:hover img { 
+    transform: scale(1.08); 
+}
+
+.portfolio-cta { 
+    text-align: center; 
+}
+
+/* =========================================
+   12. ส่วนท้าย (Footer)
+   ========================================= */
+.footer { 
+    text-align: center; 
+    padding: 3rem 0; 
+    border-top: 1px solid var(--glass-border); 
+    color: var(--text-secondary); 
+    font-size: 0.9rem; 
+}
+
+/* =========================================
+   13. แอนิเมชัน (Smooth Reveal)
+   ========================================= */
+.reveal-apple { 
+    opacity: 0; 
+    transform: translateY(40px); 
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1); 
+}
+
+.reveal-apple.is-visible { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+/* =========================================
+   14. รองรับหน้าจอมือถือ (Responsive Design)
+   ========================================= */
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto; 
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+    
+    .hero h1 { 
+        font-size: 2.2rem; 
+        line-height: 1.3;
+    }
+    
+    .profile-wrapper {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* บังคับย่อขนาดรูปภาพเฉพาะบนหน้าจอมือถือ */
+    .profile-img {
+        width: 140px; 
+        height: 140px;
+    }
+    
+    .typing-text {
+        font-size: 1.2rem; 
+        min-height: 30px;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-desc {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 15px;
+    }
+    
+    /* เมนูนำทางบนมือถือ */
+    .nav-links { 
+        display: none; 
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        width: 100%; 
+        background: var(--glass-bg); 
+        backdrop-filter: var(--nav-blur); 
+        -webkit-backdrop-filter: var(--nav-blur);
+        flex-direction: column; 
+        padding: 2rem 0; 
+        text-align: center; 
+        border-bottom: 1px solid var(--glass-border); 
+    }
+    
+    .nav-links.active { 
+        display: flex; 
+    }
+    
+    .hamburger { 
+        display: block; 
+    }
+    
+    .section { 
+        padding: 60px 0; 
+    } 
+    
+    .box-glass { 
+        padding: 1.5rem; 
+    }
+}
