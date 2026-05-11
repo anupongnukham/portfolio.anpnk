@@ -630,3 +630,52 @@ body.dark-mode .box-glass:hover {
         height: 50vh;
     }
 }
+/* =========================================
+   16. ข้อมูลเพิ่มเติม (Additional Info Section)
+   ========================================= */
+.additional-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
+    text-align: left; /* จัดข้อความชิดซ้ายให้อ่านง่าย */
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    margin-bottom: 1.2rem;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.info-list strong {
+    color: var(--accent-color); /* เน้นหัวข้อด้วยสีฟ้าของธีม */
+}
+
+.info-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    display: block;
+    margin-top: 0.3rem;
+}
