@@ -741,13 +741,16 @@ body.dark-mode .box-glass:hover {
     }
 }
 
-/* สำหรับการแสดงผลกล่อง Additional Grid (ต่ำกว่า 992px) */
-@media (max-width: 992px) {
-    .additional-grid {
-        grid-template-columns: 1fr; 
-        gap: 2.5rem;
-    }
+/* =========================================
+   18. จัดรูปแบบข้อความ แนะนำตัว & หน้าแรก
+   ========================================= */
+.about-content p, 
+.hero-desc {
+    text-align: justify;
+    text-indent: 2.5em; /* เคาะเว้นวรรคย่อหน้าบรรทัดแรก */
+    line-height: 1.8;   /* ถ่างระยะบรรทัดให้อ่านสบายตาขึ้น */
 }
+
 
 /* สำหรับการแสดงผลเมนูบนมือถือและระยะห่างบนมือถือ (ต่ำกว่า 768px) */
 @media (max-width: 768px) {
