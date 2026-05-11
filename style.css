@@ -622,61 +622,13 @@ body.dark-mode .box-glass:hover {
 }
 
 /* =========================================
-   16. ข้อมูลประกอบการพิจารณา (จัดโครงสร้างกล่องใหม่)
+   16. ข้อมูลประกอบการพิจารณา (แยกระบบคอมฯ และมือถือ)
    ========================================= */
 .additional-grid {
     display: grid;
-    /* ปรับขนาดขั้นต่ำเป็น 280px เพื่อให้ไม่ล้นจอมือถือ */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 2.5rem; /* ระยะห่างระหว่างกล่องที่พอดี ไม่ทำให้โครงสร้างพัง */
-}
-
-.info-card {
-    text-align: left; 
-    display: flex;
-    flex-direction: column;
-}
-
-.info-card i {
-    font-size: 2.5rem;
-    margin-bottom: 1.2rem;
-}
-
-.info-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1.2rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 1px solid var(--glass-border);
-}
-
-.info-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.info-list li {
-    margin-bottom: 1.5rem; /* เว้นระยะระหว่างรายการย่อยให้อ่านง่ายขึ้น */
-    color: var(--text-primary);
-}
-
-.info-list strong {
-    color: var(--accent-color); 
-    display: inline-block;
-    margin-bottom: 0.3rem; /* ถีบข้อความด้านล่างออกนิดนึง ไม่ให้เบียดตัวหนา */
-}
-
-.info-desc {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    display: block;
-    margin-top: 0.5rem;
-    
-    /* จัดหน้ากระดาษและเว้นวรรคย่อหน้าบรรทัดแรก */
-    text-align: justify;
-    text-justify: inter-word;
-    text-indent: 2em; 
-    line-height: 1.7; /* ระยะห่างระหว่างบรรทัดที่สบายตา */
+    /* บังคับหน้าจอคอมให้แบ่ง 3 คอลัมน์เท่าๆ กัน (กล่องจะไม่ยืดเกินไป) */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem; 
 }
 
 
@@ -829,3 +781,58 @@ body.dark-mode .box-glass:hover {
     }
     
     
+/* ตั้งค่าสำหรับหน้าจอมือถือและแท็บเล็ต (หน้าจอเล็กกว่า 992px) */
+@media (max-width: 992px) {
+    .additional-grid {
+        /* บังคับให้เรียงลงมาแถวละ 1 กล่อง */
+        grid-template-columns: 1fr; 
+        gap: 2.5rem;
+    }
+}
+
+.info-card {
+    text-align: left; 
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.info-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.info-list strong {
+    color: var(--accent-color); 
+    display: inline-block;
+    margin-bottom: 0.3rem;
+}
+
+.info-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    display: block;
+    margin-top: 0.5rem;
+    
+    /* จัดหน้ากระดาษให้สวยงาม (เอา inter-word ออกเพื่อไม่ให้ตัวหนังสือถ่างเกินไปบนจอคอม) */
+    text-align: justify;
+    text-indent: 2em; 
+    line-height: 1.6;
+}
