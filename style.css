@@ -621,31 +621,30 @@ body.dark-mode .box-glass:hover {
     border-color: var(--text-primary);
 }
 
-
 /* =========================================
-   16. ข้อมูลเพิ่มเติม (Additional Info Section)
+   16. ข้อมูลประกอบการพิจารณา (จัดโครงสร้างกล่องใหม่)
    ========================================= */
 .additional-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem; /* กลับมาใช้ระยะปลอดภัย หน้าเว็บจะได้ไม่พังครับ */
+    /* ปรับขนาดขั้นต่ำเป็น 280px เพื่อให้ไม่ล้นจอมือถือ */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2.5rem; /* ระยะห่างระหว่างกล่องที่พอดี ไม่ทำให้โครงสร้างพัง */
 }
 
 .info-card {
     text-align: left; 
     display: flex;
     flex-direction: column;
-    margin-bottom: 2.5rem; /* ใช้ตัวนี้ดันกล่องด้านล่างให้ห่างออกไปแทน ปลอดภัยกว่าครับ */
 }
 
 .info-card i {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
 .info-card h3 {
     font-size: 1.4rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     padding-bottom: 0.8rem;
     border-bottom: 1px solid var(--glass-border);
 }
@@ -657,13 +656,14 @@ body.dark-mode .box-glass:hover {
 }
 
 .info-list li {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem; /* เว้นระยะระหว่างรายการย่อยให้อ่านง่ายขึ้น */
     color: var(--text-primary);
-    line-height: 1.6;
 }
 
 .info-list strong {
     color: var(--accent-color); 
+    display: inline-block;
+    margin-bottom: 0.3rem; /* ถีบข้อความด้านล่างออกนิดนึง ไม่ให้เบียดตัวหนา */
 }
 
 .info-desc {
@@ -672,13 +672,12 @@ body.dark-mode .box-glass:hover {
     display: block;
     margin-top: 0.5rem;
     
-    /* เพิ่มการเว้นวรรคและจัดขอบเสมอกันตรงนี้ครับ */
+    /* จัดหน้ากระดาษและเว้นวรรคย่อหน้าบรรทัดแรก */
     text-align: justify;
     text-justify: inter-word;
     text-indent: 2em; 
-    line-height: 1.6;
+    line-height: 1.7; /* ระยะห่างระหว่างบรรทัดที่สบายตา */
 }
-
 
 
 
