@@ -11,10 +11,11 @@ window.scrollTo(0, 0);
 // 1. ลูกเล่น Typing Effect พิมพ์ข้อความอัตโนมัติ (ใส่ทักษะของคุณเข้าไปครบถ้วน)
 const typingText = document.querySelector(".typing-text");
 const phrases = [
-    "IT Support Specialist", 
-    "Web Developer (PHP/JS)", 
-    "Database Manager", 
-    "Graphic Designer"
+    "IT Support / IT Staff", 
+    "Admin / General Affairs", 
+    "Document Controller / Data Administrator", 
+    "HR Admin / HR Support",
+    "Coordinator"
 ];
 let phraseIndex = 0;
 let charIndex = 0;
@@ -36,7 +37,7 @@ function type() {
 
     if (!isDeleting && charIndex === currentPhrase.length) {
         isDeleting = true;
-        typeSpeed = 2500; // หยุดพักให้อ่าน 2.5 วินาที
+        typeSpeed = 3200; // หยุดพักให้อ่าน 2.5 วินาที
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         phraseIndex = (phraseIndex + 1) % phrases.length;
