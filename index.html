@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anupong Nukham - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar glass-effect">
+        <div class="logo">PORTFOILO</div>
+        <ul class="nav-links">
+            <li><a href="#home">หน้าแรก</a></li>
+            <li><a href="#about">เกี่ยวกับฉัน</a></li>
+            <li><a href="#skills">ทักษะ</a></li>
+            <li><a href="#experience">ประสบการณ์</a></li>
+            <li><a href="#portfolio">ผลงาน</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content reveal-apple">
+            <div class="profile-wrapper">
+                <img src="Kiw.jpg" alt="อนุพงศ์" class="profile-img">
+            </div>
+            <h1>สวัสดีครับ ผมชื่อ</h1>
+<h1> <span class="text-gradient">นาย อนุพงศ์ หนูเข็ม (คิว)</span></h1>
+            <h2 class="typing-text"></h2>
+            <p class="hero-desc">ยินดีต้อนรับสู่พื้นที่แสดงผลงานของผมครับ ผมนำความรู้สายเทคโนโลยีดิจิทัลและการใช้โปรแกรม Microsoft Office มาช่วยจัดระเบียบงานเอกสารและระบบหลังบ้านให้รวดเร็วและมีประสิทธิภาพ ผมเป็นคนชอบเรียนรู้สิ่งใหม่ๆ และพร้อมเป็นส่วนหนึ่งในการสนับสนุนทีม เพื่อให้การทำงานขององค์กรดำเนินไปอย่างราบรื่นครับ
+
+</p>
+            <button onclick="openResumeModal()" class="btn primary-btn glow-effect">
+    ดู Resume ของฉัน <i class="fas fa-image"></i>
+</button>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+    <div class="container reveal-apple">
+        <h2 class="section-title">เกี่ยวกับฉัน</h2>
+        <div class="about-content box-glass">
+            <p>ด้วยความรู้สายเทคโนโลยีดิจิทัลและความชำนาญใน Microsoft Office ผมมีความตั้งใจที่จะนำทักษะเหล่านี้มาช่วยจัดการงานเอกสารและระบบหลังบ้านให้เป็นระเบียบและรวดเร็วขึ้น ผมเป็นคนที่ชอบเรียนรู้สิ่งใหม่ๆ และพร้อมที่จะเป็นส่วนหนึ่งในการสนับสนุนทีม เพื่อให้การทำงานขององค์กรดำเนินไปอย่างราบรื่นและมีประสิทธิภาพครับ</p>
+            <div class="about-grid">
+                <div class="about-item">
+                    <span class="label">วันเกิด</span>
+                    <span class="value">19 พฤษภาคม 2545</span>
+                </div>
+                <div class="about-item">
+                    <span class="label">วุฒิการศึกษา</span>
+                    <span class="value">ปริญญาตรีบริหารธุรกิจบัณฑิต สาขาเทคโนโลยีดิจิทัล</span>
+                    <h4 class="text-gradient">จบการศึกษาปี 2568 GPA 2.98</h4>
+                </div>
+                <div class="about-item">
+                    <span class="label">เป้าหมาย</span>
+                    <span class="value">ผมมุ่งมั่นในการพัฒนาตนเองอย่างต่อเนื่อง เพื่อเสริมสร้างองค์ความรู้ใหม่ๆ อันจะเป็นประโยชน์ต่อการต่อยอดและเพิ่มประสิทธิภาพในการปฏิบัติงาน</span>
+                </div>
+                
+                <!-- ข้อมูลการติดต่อ -->
+                <div class="about-item">
+                    <span class="label">เบอร์โทรศัพท์</span>
+                    <span class="value">
+                        <a href="tel:0925764429">092-5764429</a>
+                    </span>
+                </div>
+                <div class="about-item">
+                    <span class="label">Line ID</span>
+                    <span class="value">
+                        <a href="https://line.me/ti/p/~anpnk19" target="_blank" rel="noopener noreferrer">anpnk19</a>
+                    </span>
+                </div>
+                <div class="about-item">
+                    <span class="label">อีเมล</span>
+                    <span class="value">
+                        <a href="mailto:anupongnukham@gmail.com">anupongnukham@gmail.com</a>
+                    </span>
+                </div>
+                <div class="about-item">
+                    <span class="label">ที่อยู่</span>
+                    <span class="value">87/27 ตำบลบางละมุง อำเภอบางละมุง จังหวัดชลบุรี 20150</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="skills" class="section bg-alt">
+        <div class="container reveal-apple">
+            <h2 class="section-title">ทักษะความสามารถ</h2>
+            <div class="skills-grid">
+                <div class="skill-card box-glass tilt-effect">
+                    <i class="fas fa-tools icon-gradient"></i>
+                    <h3>IT Support</h3>
+                    <p>Hardware & Software Troubleshooting</p>
+                </div>
+                <div class="skill-card box-glass tilt-effect">
+                    <i class="fas fa-code icon-gradient"></i>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, PHP</p>
+                </div>
+                <div class="skill-card box-glass tilt-effect">
+                    <i class="fas fa-database icon-gradient"></i>
+                    <h3>Database</h3>
+                    <p>SQL, MySQL</p>
+                </div>
+                <div class="skill-card box-glass tilt-effect">
+                    <i class="fas fa-paint-brush icon-gradient"></i>
+                    <h3>Design</h3>
+                    <p>Graphic Design & Image Editing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container reveal-apple">
+            <h2 class="section-title">ประสบการณ์ทำงาน</h2>
+            <div class="timeline">
+                <div class="timeline-item box-glass">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>ผู้จัดการและเสมียน</h3>
+                        <h4 class="text-gradient">ร้านรับซื้อของเก่า</h4>
+                        <p>ดูแลการจัดการระบบซื้อขาย กำหนดราคา ทำบัญชีเบื้องต้น และจัดการระบบโลจิสติกส์ของร้าน</p>
+                    </div>
+                </div>
+                <div class="timeline-item box-glass">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>พนักงานทำพิซซ่า</h3>
+                        <h4 class="text-gradient">The Pizza Company</h4>
+                        <p>ทำงานเป็นทีมภายใต้ความกดดันและรักษามาตรฐานคุณภาพของสินค้า</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section bg-alt">
+        <div class="container reveal-apple">
+            <h2 class="section-title">ผลงานของฉัน</h2>
+            <p class="subtitle">คลิกที่ปุ่มด้านล่างเพื่อเข้าสู่เว็บไซต์รวมผลงานแบบเต็มรูปแบบ</p>
+            
+            <div class="portfolio-showcase">
+                <div class="portfolio-item">
+                    <img src="images/portfolio-1.jpg" alt="ผลงานที่ 1">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/portfolio-2.jpg" alt="ผลงานที่ 2">
+                </div>
+            </div>
+
+            <div class="portfolio-cta">
+                <a href="http://www.anpnk.online" target="_blank" class="btn primary-btn btn-large glow-effect">
+                    <i class="fas fa-external-link-alt"></i> เข้าชมเว็บไซต์ www.anpnk.online
+                </a>
+            </div>
+        </div>
+    </section>
+       <div id="resumeModal" class="modal-overlay">
+    <div class="modal-content box-glass">
+        <button class="close-btn" onclick="closeResumeModal()">
+    <i class="fas fa-times"></i> 
+</button>
+
+        <h3 style="text-align: center; margin-bottom: 1rem;">Resume ของอนุพงศ์ หนูเข็ม</h3>
+        
+        <div class="resume-preview img-preview">
+            <img src="Resume.png" alt="Resume Anupong" class="resume-img">
+        </div>
+        
+        <div class="modal-actions">
+            <a href="Resume.png" target="_blank" class="btn btn-secondary">
+                <i class="fas fa-expand"></i> ขยายดูเต็มจอ
+            </a>
+            <a href="Resume.png" download="Resume_อนุพงศ์ หนูเข็ม.png" class="btn primary-btn">
+                <i class="fas fa-download"></i> ดาวน์โหลดไฟล์
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+    <section id="additional-info" class="section">
+        <div class="container reveal-apple">
+            <h2 class="section-title">ข้อมูลเพิ่มเติม</h2>
+            <div class="additional-grid">
+                
+                <div class="info-card box-glass tilt-effect" data-tilt>
+                    <i class="fas fa-language icon-gradient"></i>
+                    <h3>ทักษะด้านภาษา</h3>
+                    
+                    <div class="skill-bar-container">
+                        <div class="skill-info">
+                            <strong>ภาษาไทย</strong>
+                            <span>ดีเยี่ยม (ฟัง, พูด, อ่าน, เขียน)</span>
+                        </div>
+                        <div class="progress-bg">
+                            <div class="progress-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar-container">
+                        <div class="skill-info">
+                            <strong>ภาษาอังกฤษ</strong>
+                            <span>ปานกลาง (ฟัง, พูด, อ่าน, เขียน)</span>
+                        </div>
+                        <div class="progress-bg">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card box-glass tilt-effect" data-tilt>
+                    <i class="fas fa-certificate icon-gradient"></i>
+                    <h3>ประวัติการฝึกอบรม</h3>
+                    <ul class="info-list">
+                        <li>
+                            <strong>Microsoft Excel ระดับมืออาชีพ</strong><br>
+                            <span class="info-desc"><strong>สถาบัน:</strong> Coursera</span><br>
+                            <span class="info-desc">ผ่านการประเมินทักษะการใช้ Excel เพื่อจัดการข้อมูลและวางระบบงานเอกสาร</span>
+                            
+                            <button onclick="openCertModal()" class="btn secondary-btn small-btn mt-3">
+                                <i class="fas fa-award"></i> ดูเกียรติบัตร
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="info-card box-glass tilt-effect" data-tilt>
+                    <i class="fas fa-car icon-gradient"></i>
+                    <h3>ข้อมูลใบอนุญาตขับขี่</h3>
+                    <ul class="info-list">
+                        <li>
+                            <strong>รถยนต์ และ รถจักรยานยนต์</strong><br>
+                            <span class="info-desc">มียานพาหนะส่วนตัวพร้อมใช้งาน สามารถเดินทางไปปฏิบัติงาน หรือลงพื้นที่ประสานงานนอกสถานที่ได้อย่างคล่องตัวและตรงต่อเวลา</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+        <div id="certModal" class="modal-overlay">
+        <div class="modal-content box-glass">
+            <button class="close-btn" onclick="closeCertModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 style="text-align: center; margin-bottom: 1rem;">เกียรติบัตร Coursera</h3>
+            <div class="resume-preview img-preview">
+                <img src="cert-excel.jpg" alt="Certificate" class="resume-img">
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Anupong. Crafted with precision.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
