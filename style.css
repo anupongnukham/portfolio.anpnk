@@ -748,6 +748,37 @@ body.dark-mode .box-glass:hover {
 
 
 
+/* =========================================
+   18. จัดเรียงชื่อบริษัทและระยะเวลา (Company & Duration)
+   ========================================= */
+.company-duration {
+    display: flex;
+    justify-content: space-between; /* ดันข้อความไปชิดขอบซ้าย-ขวา */
+    align-items: center; /* ให้อยู่กึ่งกลางบรรทัดเดียวกัน */
+    margin-bottom: 1rem;
+    flex-wrap: wrap; /* ป้องกันข้อความทับกันเวลาดูบนจอมือถือเล็กๆ */
+    gap: 0.8rem;
+}
+
+.company-duration h4 {
+    margin-bottom: 0; /* ลบระยะห่างด้านล่างเดิมออก */
+    font-size: 1.15rem;
+}
+
+/* ตกแต่งกล่องระยะเวลาให้ดูคล้ายป้าย Tag (Apple Style) */
+.company-duration .duration {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    background: var(--bg-primary); 
+    border: 1px solid var(--glass-border);
+    padding: 4px 12px;
+    border-radius: 20px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+
+
 
 /* ปรับแต่งสำหรับมือถือ */
 @media (max-width: 768px) {
