@@ -627,7 +627,7 @@ body.dark-mode .box-glass:hover {
 .additional-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 5rem; /* <--- เปลี่ยนเป็น 4rem หรือ 5rem เพื่อถ่างกล่องให้ห่างกันมากขึ้นครับ */
 }
 
 .info-card {
@@ -820,36 +820,4 @@ body.dark-mode .box-glass:hover {
         padding: 0 15px;
     }
     
-    /* แก้ไขปัญหาเมนูเบียดกันตรงนี้ */
-    .nav-links { 
-        display: none; /* บังคับซ่อนเมนูยาวๆ ก่อน */
-        position: absolute; 
-        top: 100%; 
-        left: 0; 
-        width: 100%; 
-        background: var(--glass-bg); 
-        backdrop-filter: var(--nav-blur); 
-        -webkit-backdrop-filter: var(--nav-blur);
-        flex-direction: column; /* เปลี่ยนให้เรียงจากบนลงล่าง */
-        padding: 2rem 0; 
-        text-align: center; 
-        border-bottom: 1px solid var(--glass-border); 
-        gap: 1.5rem; /* เพิ่มระยะห่างระหว่างบรรทัดตอนกดเมนู */
-    }
     
-    .nav-links.active { 
-        display: flex; /* แสดงเมนูเมื่อกดปุ่มแฮมเบอร์เกอร์ */
-    }
-    
-    .hamburger { 
-        display: block; /* บังคับแสดงปุ่ม 3 ขีด */
-    }
-    
-    .section { 
-        padding: 60px 0; 
-    } 
-    
-    .box-glass { 
-        padding: 1.5rem; 
-    }
-}
