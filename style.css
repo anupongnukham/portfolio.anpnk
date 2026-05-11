@@ -580,10 +580,22 @@ body.dark-mode .box-glass:hover {
     background: #fff; /* ให้พื้นหลัง pdf เป็นสีขาวเสมอ */
 }
 
-.resume-preview iframe {
-    width: 100%;
-    height: 100%;
+/* ปรับปรุง CSS เพื่อรองรับการแสดงผลรูปภาพแทน iframe */
+.resume-img {
+    width: 100%;          /* กว้างเต็มกล่องพรีวิว */
+    height: 100%;         /* สูงเต็มกล่องพรีวิว */
+    object-fit: contain;  /* ✅ รักษาอัตราส่วนรูป ไม่ให้รูปบี้หรือโดนตัด */
     border: none;
+    background: transparent; /* ให้พื้นหลัง pdf เป็นสีขาว (ถ้าไฟล์ png ใส) */
+}
+
+/* ถ้าอยากให้ขอบรูปมีเงาหน่อยๆ เพื่อความสวยงาม */
+.resume-preview.img-preview {
+    background: #f4f4f4; /* เพิ่มพื้นหลังสีอ่อนๆ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
 .modal-actions {
