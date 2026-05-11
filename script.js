@@ -137,3 +137,30 @@ window.addEventListener('click', function(event) {
         closeResumeModal();
     }
 });
+
+// ==========================================
+// ระบบเปิด-ปิด Pop-up เกียรติบัตร
+// ==========================================
+function openCertModal() {
+    document.getElementById('certModal').classList.add('show');
+    document.body.style.overflow = 'hidden'; 
+}
+
+function closeCertModal() {
+    document.getElementById('certModal').classList.remove('show');
+    document.body.style.overflow = 'auto'; 
+}
+
+// อัปเดตฟังก์ชันปิด Pop-up อัตโนมัติเมื่อคลิกพื้นที่ว่างด้านนอก (แทนที่อันเดิม)
+window.addEventListener('click', function(event) {
+    const resumeModal = document.getElementById('resumeModal');
+    const certModal = document.getElementById('certModal');
+    
+    if (event.target === resumeModal) {
+        closeResumeModal();
+    }
+    if (event.target === certModal) {
+        closeCertModal();
+    }
+});
+
