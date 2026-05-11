@@ -165,3 +165,34 @@ window.addEventListener('click', function(event) {
     }
 });
 
+// ==========================================
+// ระบบเปิด-ปิด Pop-up รูปโปรไฟล์
+// ==========================================
+function openProfileModal() {
+    document.getElementById('profileModal').classList.add('show');
+    document.body.style.overflow = 'hidden'; 
+}
+
+function closeProfileModal() {
+    document.getElementById('profileModal').classList.remove('show');
+    document.body.style.overflow = 'auto'; 
+}
+
+// ==========================================
+// อัปเดตฟังก์ชันปิด Pop-up อัตโนมัติเมื่อคลิกพื้นที่ว่าง
+// ==========================================
+window.addEventListener('click', function(event) {
+    const resumeModal = document.getElementById('resumeModal');
+    const certModal = document.getElementById('certModal');
+    const profileModal = document.getElementById('profileModal'); // เพิ่มตัวแปรนี้
+    
+    if (event.target === resumeModal) {
+        closeResumeModal();
+    }
+    if (event.target === certModal) {
+        closeCertModal();
+    }
+    if (event.target === profileModal) {
+        closeProfileModal(); // สั่งปิดรูปโปรไฟล์
+    }
+});
