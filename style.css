@@ -702,46 +702,6 @@ body.dark-mode .box-glass:hover {
 }
 
 /* =========================================
-   17. การตั้งค่าหน้าจอ (Responsive Media Queries)
-   รวมไว้ที่ด้านล่างสุดเสมอ เพื่อป้องกันโค้ดพัง
-   ========================================= */
-
-/* สำหรับหน้าจอแท็บเล็ตและหน้าจอขนาดกลาง (ต่ำกว่า 1024px) */
-@media (max-width: 1024px) {
-    .hero {
-        min-height: auto; 
-        padding-top: 120px;
-        padding-bottom: 60px;
-    }
-    
-    .hero h1 { 
-        font-size: 2.2rem; 
-        line-height: 1.3;
-    }
-    
-    .profile-wrapper {
-        margin-bottom: 1.5rem;
-    }
-    
-    .profile-img {
-        width: 140px; 
-        height: 140px;
-    }
-    
-    .typing-text {
-        font-size: 1.2rem; 
-        min-height: 30px;
-        margin-bottom: 1rem;
-    }
-    
-    .hero-desc {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-        padding: 0 15px;
-    }
-}
-
-/* =========================================
    18. จัดรูปแบบข้อความ แนะนำตัว & หน้าแรก
    ========================================= */
 .about-content p, 
@@ -750,6 +710,7 @@ body.dark-mode .box-glass:hover {
     text-indent: 2.5em; /* เคาะเว้นวรรคย่อหน้าบรรทัดแรก */
     line-height: 1.8;   /* ถ่างระยะบรรทัดให้อ่านสบายตาขึ้น */
 }
+
 /* =========================================
    19. แก้ปัญหากล่องชิดกัน (บังคับถ่างระยะห่าง)
    ========================================= */
@@ -759,14 +720,53 @@ body.dark-mode .box-glass:hover {
     margin-bottom: 3rem !important; /* บังคับเว้นระยะห่างด้านล่างเสมอ */
 }
 
-.additional-grid, 
 .skills-grid {
     gap: 3rem !important; /* ถ่างช่องว่างตรงกลางระหว่างกล่องให้กว้างขึ้น */
 }
 
+/* =========================================
+   20. จัดระเบียบกล่องขั้นเด็ดขาด (เรียงแนวนอนอัตโนมัติ + ไม่ยืดความสูง)
+   ========================================= */
+.additional-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important; 
+    align-items: start !important; 
+    gap: 2.5rem !important; 
+}
 
-/* สำหรับการแสดงผลเมนูบนมือถือและระยะห่างบนมือถือ (ต่ำกว่า 768px) */
-@media (max-width: 768px) {
+.additional-grid .info-card {
+    margin-bottom: 0 !important; 
+    height: auto !important; 
+}
+
+/* =========================================
+   21. ปรับสมดุลขนาดตัวอักษรบนจอคอม (Desktop Typography Balance)
+   ========================================= */
+@media (min-width: 1025px) {
+    .hero h1 { font-size: 3.5rem !important; }
+    .section-title { font-size: 2.5rem !important; }
+    .typing-text { font-size: 1.6rem !important; }
+    .hero-desc { font-size: 1.15rem !important; }
+    .info-desc, .timeline-content p, .skill-card p {
+        font-size: 1.05rem !important; 
+        line-height: 1.8 !important; 
+    }
+    .info-list li, .timeline-content h4 { font-size: 1.1rem !important; }
+    .company-duration .duration { font-size: 0.95rem !important; }
+}
+
+/* =========================================
+   22. การตั้งค่าหน้าจอมือถือและแท็บเล็ต (ต้องอยู่ล่างสุดเสมอ)
+   ========================================= */
+@media (max-width: 1024px) {
+    .hero { min-height: auto; padding-top: 120px; padding-bottom: 60px; }
+    .hero h1 { font-size: 2.2rem; line-height: 1.3; }
+    .profile-wrapper { margin-bottom: 1.5rem; }
+    .profile-img { width: 140px; height: 140px; }
+    .typing-text { font-size: 1.2rem; min-height: 30px; margin-bottom: 1rem; }
+    .hero-desc { font-size: 1rem; margin-bottom: 2rem; padding: 0 15px; }
+    
+    /* ควบรวมการซ่อนเมนูมาไว้ที่ 1024px เพื่อกันเมนูพังใน iPad */
     .nav-links { 
         display: none; 
         position: absolute; 
@@ -781,58 +781,8 @@ body.dark-mode .box-glass:hover {
         text-align: center; 
         border-bottom: 1px solid var(--glass-border); 
     }
-    
-    .nav-links.active { 
-        display: flex; 
-    }
-    
-    .hamburger { 
-        display: block; 
-    }
-    
-    .section { 
-        padding: 60px 0; 
-    } 
-    
-    .box-glass { 
-        padding: 1.5rem; 
-    }
-}
-
-/* =========================================
-   21. ปรับสมดุลขนาดตัวอักษรบนจอคอม (Desktop Typography Balance)
-   ========================================= */
-/* คำสั่ง (min-width: 1025px) คือให้ทำงานเฉพาะบนจอคอมเท่านั้น มือถือจะไม่พังครับ */
-@media (min-width: 1025px) {
-    
-    /* 1. ลดขนาดหัวข้อที่ใหญ่เกินไปให้ดูนุ่มนวลขึ้น */
-    .hero h1 {
-        font-size: 3.5rem !important; /* ของเดิม 4.5rem ใหญ่ไปนิดครับ */
-    }
-    .section-title {
-        font-size: 2.5rem !important; /* ของเดิม 3rem */
-    }
-    .typing-text {
-        font-size: 1.6rem !important;
-    }
-
-    /* 2. ขยายข้อความเนื้อหาทั่วไปให้อ่านง่าย ไม่ต้องเพ่ง */
-    .hero-desc {
-        font-size: 1.15rem !important;
-    }
-    .info-desc, 
-    .timeline-content p, 
-    .skill-card p {
-        font-size: 1.05rem !important; /* ขยายจาก 0.95rem ให้อ่านเต็มตาขึ้น */
-        line-height: 1.8 !important; /* เพิ่มช่องไฟบรรทัดให้อ่านลื่นไหล */
-    }
-    
-    /* 3. ปรับขนาดตัวหนังสือในลิสต์รายการให้สมดุล */
-    .info-list li,
-    .timeline-content h4 {
-        font-size: 1.1rem !important;
-    }
-    .company-duration .duration {
-        font-size: 0.95rem !important; /* ป้ายปี พ.ศ. ให้ใหญ่ขึ้นนิดนึง */
-    }
+    .nav-links.active { display: flex; }
+    .hamburger { display: block; }
+    .section { padding: 60px 0; } 
+    .box-glass { padding: 1.5rem; }
 }
