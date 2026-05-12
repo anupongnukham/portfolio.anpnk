@@ -799,3 +799,40 @@ body.dark-mode .box-glass:hover {
     }
 }
 
+/* =========================================
+   21. ปรับสมดุลขนาดตัวอักษรบนจอคอม (Desktop Typography Balance)
+   ========================================= */
+/* คำสั่ง (min-width: 1025px) คือให้ทำงานเฉพาะบนจอคอมเท่านั้น มือถือจะไม่พังครับ */
+@media (min-width: 1025px) {
+    
+    /* 1. ลดขนาดหัวข้อที่ใหญ่เกินไปให้ดูนุ่มนวลขึ้น */
+    .hero h1 {
+        font-size: 3.5rem !important; /* ของเดิม 4.5rem ใหญ่ไปนิดครับ */
+    }
+    .section-title {
+        font-size: 2.5rem !important; /* ของเดิม 3rem */
+    }
+    .typing-text {
+        font-size: 1.6rem !important;
+    }
+
+    /* 2. ขยายข้อความเนื้อหาทั่วไปให้อ่านง่าย ไม่ต้องเพ่ง */
+    .hero-desc {
+        font-size: 1.15rem !important;
+    }
+    .info-desc, 
+    .timeline-content p, 
+    .skill-card p {
+        font-size: 1.05rem !important; /* ขยายจาก 0.95rem ให้อ่านเต็มตาขึ้น */
+        line-height: 1.8 !important; /* เพิ่มช่องไฟบรรทัดให้อ่านลื่นไหล */
+    }
+    
+    /* 3. ปรับขนาดตัวหนังสือในลิสต์รายการให้สมดุล */
+    .info-list li,
+    .timeline-content h4 {
+        font-size: 1.1rem !important;
+    }
+    .company-duration .duration {
+        font-size: 0.95rem !important; /* ป้ายปี พ.ศ. ให้ใหญ่ขึ้นนิดนึง */
+    }
+}
