@@ -786,3 +786,45 @@ body.dark-mode .box-glass:hover {
     .section { padding: 60px 0; } 
     .box-glass { padding: 1.5rem; }
 }
+/* =========================================
+   21. คุมโทนขนาดตัวอักษรทั้งเว็บไซต์ (Master Typography Control)
+   ========================================= */
+
+/* 1. คุมขนาด "ข้อความเนื้อหายาวๆ ทุกส่วน" ให้เท่ากันเป๊ะ (แก้ปัญหาตัวหนังสือใหญ่เกิน) */
+.hero-desc, 
+.about-content p, /* <-- ตัวนี้แหละครับตัวต้นเรื่องที่ทำให้มันใหญ่ */
+.info-desc, 
+.timeline-content p, 
+.skill-card p {
+    font-size: 1.05rem !important; /* บังคับให้ทุกที่ใช้ขนาด 16.8px เท่ากัน */
+    line-height: 1.8 !important;   /* บังคับช่องไฟบรรทัดให้เท่ากัน */
+}
+
+/* 2. คุมขนาด "หัวข้อย่อยในกล่องต่างๆ" ให้ดูเป็นหมวดหมู่เดียวกัน */
+.skill-card h3, 
+.timeline-content h3, 
+.info-card h3 {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.8rem !important;
+}
+
+/* 3. คุมขนาด "ตัวหนังสือในลิสต์และข้อมูลตัวหนา" */
+.about-item .value, 
+.info-list li, 
+.timeline-content h4 {
+    font-size: 1.1rem !important;
+}
+
+/* 4. คุมขนาด "ข้อความป้ายกำกับเล็กๆ" ให้ไม่เล็กจนเกินไป */
+.about-item .label,
+.company-duration .duration,
+.skill-info span {
+    font-size: 0.9rem !important;
+}
+
+/* 5. ปรับขนาด "หัวข้อหลัก (H1, H2)" บนหน้าจอคอมไม่ให้ตะโกนเกินไป */
+@media (min-width: 1025px) {
+    .hero h1 { font-size: 3.5rem !important; }
+    .section-title { font-size: 2.5rem !important; }
+    .typing-text { font-size: 1.6rem !important; }
+}
