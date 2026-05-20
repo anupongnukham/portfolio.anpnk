@@ -154,7 +154,7 @@ function closeCertModal(modalId) {
 
 // อัปเดต Event Listener ให้ครอบคลุมหลาย Modal
 window.addEventListener('click', function(event) {
-    const modals = ['resumeModal', 'certModal', 'certModal2']; // เพิ่ม certModal2 เข้าไปที่นี่
+    const modals = ['resumeModal', 'certModal', 'certModal2', 'certModal3']; // เพิ่ม certModal2 เข้าไปที่นี่
     
     modals.forEach(id => {
         const modal = document.getElementById(id);
