@@ -253,30 +253,32 @@
                     </div>
                 </div>
 
-                <div class="info-card box-glass tilt-effect" data-tilt>
-                    <i class="fas fa-certificate icon-gradient"></i>
-                    <h3>ประวัติการฝึกอบรม</h3>
-                    <ul class="info-list">
-                        <li>
-                            <strong>Microsoft Excel ระดับมืออาชีพ</strong><br>
-                            <span class="info-desc"><strong>สถาบัน:</strong> Coursera</span><br>
-                            <span class="info-desc">       ผ่านการประเมินทักษะการใช้ Excel เพื่อจัดการข้อมูลและวางระบบงานเอกสาร</span>
-                            
-                            <button onclick="openCertModal()" class="btn secondary-btn small-btn mt-3">
-                                <i class="fas fa-award"></i> ดูเกียรติบัตร
-                            </button>
-                        </li>
-                    </ul>
-                    <!-- ใบที่ 2 (เพิ่มใหม่) -->
-        <li style="margin-top: 20px;">
-            <strong>Artificial Intelligence in Content Marketing</strong><br>
-            <span class="info-desc"><strong>สถาบัน:</strong>Samsung Innovation Campus</span><br>
-            <span class="info-desc">เข้าใจ Content Marketing และประยุกต์ใช้เทคโนโลยี AI เพื่อเพิ่มประสิทธิภาพในการทำการตลาด ทั้งในระดับธุรกิจและบุคคล (Personal Branding)</span><br>
-            <button onclick="openCertModal2()" class="btn secondary-btn small-btn mt-3">
+               <div class="info-card box-glass tilt-effect" data-tilt>
+    <i class="fas fa-certificate icon-gradient"></i>
+    <h3>ประวัติการฝึกอบรม</h3>
+    <ul class="info-list">
+        <!-- ใบที่ 1 -->
+        <li>
+            <strong>Microsoft Excel ระดับมืออาชีพ</strong><br>
+            <span class="info-desc"><strong>สถาบัน:</strong> Coursera</span><br>
+            <span class="info-desc">ผ่านการประเมินทักษะการใช้ Excel เพื่อจัดการข้อมูลและวางระบบงานเอกสาร</span><br>
+            <button onclick="openCertModal('certModal')" class="btn secondary-btn small-btn mt-3">
                 <i class="fas fa-award"></i> ดูเกียรติบัตร
             </button>
         </li>
-                </div>
+        
+        <!-- ใบที่ 2 -->
+        <li style="margin-top: 20px;">
+            <strong>Artificial Intelligence in Content Marketing</strong><br>
+            <span class="info-desc"><strong>สถาบัน:</strong> Samsung Innovation Campus</span><br>
+            <span class="info-desc">เข้าใจ Content Marketing และประยุกต์ใช้เทคโนโลยี AI เพื่อเพิ่มประสิทธิภาพในการทำการตลาด ทั้งในระดับธุรกิจและบุคคล (Personal Branding)</span><br>
+            <button onclick="openCertModal('certModal2')" class="btn secondary-btn small-btn mt-3">
+                <i class="fas fa-award"></i> ดูเกียรติบัตร
+            </button>
+        </li>
+    </ul>
+</div>
+
 
                 <div class="info-card box-glass tilt-effect" data-tilt>
                     <i class="fas fa-car icon-gradient"></i>
@@ -295,23 +297,23 @@
 
 
 
-
-        <div id="certModal" class="modal-overlay">
-        <div class="modal-content box-glass">
-            <button class="close-btn" onclick="closeCertModal()">
-                <i class="fas fa-times"></i>
-            </button>
-            <h3 style="text-align: center; margin-bottom: 1rem;">เกียรติบัตร Coursera</h3>
-            <div class="resume-preview img-preview">
-                <img src="cert-excel.jpg" alt="Certificate" class="resume-img">
-            </div>
+<!-- Modal ใบที่ 1 -->
+<div id="certModal" class="modal-overlay">
+    <div class="modal-content box-glass">
+        <button class="close-btn" onclick="closeCertModal('certModal')">
+            <i class="fas fa-times"></i>
+        </button>
+        <h3 style="text-align: center; margin-bottom: 1rem;">เกียรติบัตร Coursera</h3>
+        <div class="resume-preview img-preview">
+            <img src="cert-excel.jpg" alt="Certificate" class="resume-img">
         </div>
     </div>
+</div>
 
-    <!-- Modal สำหรับใบที่ 2 -->
+<!-- Modal ใบที่ 2 -->
 <div id="certModal2" class="modal-overlay">
     <div class="modal-content box-glass">
-        <button class="close-btn" onclick="closeCertModal2()">
+        <button class="close-btn" onclick="closeCertModal('certModal2')">
             <i class="fas fa-times"></i>
         </button>
         <h3 style="text-align: center; margin-bottom: 1rem;">Artificial Intelligence in Content Marketing</h3>
