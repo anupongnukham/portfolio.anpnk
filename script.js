@@ -140,30 +140,30 @@ window.addEventListener('click', function(event) {
 });
 
 // ==========================================
-// ระบบเปิด-ปิด Pop-up เกียรติบัตร
+// ระบบเปิด-ปิด Pop-up เกียรติบัตร (รองรับหลายใบ)
 // ==========================================
-function openCertModal() {
-    document.getElementById('certModal').classList.add('show');
+function openCertModal(modalId) {
+    document.getElementById(modalId).classList.add('show');
     document.body.style.overflow = 'hidden'; 
 }
 
-function closeCertModal() {
-    document.getElementById('certModal').classList.remove('show');
+function closeCertModal(modalId) {
+    document.getElementById(modalId).classList.remove('show');
     document.body.style.overflow = 'auto'; 
 }
 
-// อัปเดตฟังก์ชันปิด Pop-up อัตโนมัติเมื่อคลิกพื้นที่ว่างด้านนอก (แทนที่อันเดิม)
+// อัปเดต Event Listener ให้ครอบคลุมหลาย Modal
 window.addEventListener('click', function(event) {
-    const resumeModal = document.getElementById('resumeModal');
-    const certModal = document.getElementById('certModal');
+    const modals = ['resumeModal', 'certModal', 'certModal2']; // เพิ่ม certModal2 เข้าไปที่นี่
     
-    if (event.target === resumeModal) {
-        closeResumeModal();
-    }
-    if (event.target === certModal) {
-        closeCertModal();
-    }
+    modals.forEach(id => {
+        const modal = document.getElementById(id);
+        if (event.target === modal) {
+            closeCertModal(id); // ใช้ฟังก์ชันปิดตัวเดียวกัน
+        }
+    });
 });
+
 
 // ==========================================
 // ระบบเปิด-ปิด Pop-up รูปโปรไฟล์
